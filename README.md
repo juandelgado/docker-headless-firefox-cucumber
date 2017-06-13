@@ -9,16 +9,29 @@ This is a base image that would leave a working system with:
 
 This image is not meant to be used on its own, but as a base for your own Cucumber projects that require headless automation.
 
+## Requirements
+
+ * Docker.
+ * Ruby 2.4 (development only).
+
+## Sample
+
+To build the sample project:
+
+ * `make build-sample`
+
+To run it:
+
+ * `make run-sample`
+
+You should see the output of running Cucumber in the terminal once Docker has finished. Hopefully something along these lines:
+
+```bash
+1 scenario (1 passed)
+2 steps (2 passed)
+```
+
 ## Development
-
-### Requirements
-
-Only if you want to build _this_ image:
-
- * Ruby 2.4
- * Docker!
-
-Then:
 
  * `make` to build the image. 
 
