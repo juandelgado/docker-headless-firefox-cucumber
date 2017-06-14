@@ -1,4 +1,4 @@
-Feature: I want to headless UI testing inside Docker!
+Feature: I want headless UI testing with Cucumber and Firefox inside Docker!
 
   Scenario: Visit that site
     Given I open that web page
