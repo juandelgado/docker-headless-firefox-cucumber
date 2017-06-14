@@ -13,7 +13,7 @@ publish:
 
 build-sample:
 	docker pull $(IMAGE_NAME)
-	docker build -f sample/Dockerfile -t $(SAMPLE_IMAGE_NAME) .
+	docker build -t $(SAMPLE_IMAGE_NAME) sample
 .PHONY: build-sample
 
 run-sample: build-sample
