@@ -12,17 +12,15 @@ This image is not meant to be used on its own, but as a base for your own Cucumb
 ## Requirements
 
  * Docker.
- * Ruby 2.4 (development only).
+ * Ruby 2.4, but only for development.
 
-## Sample
+## Sample Cucumber tests
 
-To build the sample project:
-
- * `make build-sample`
-
-To run it:
+Run the sample tests:
 
  * `make run-sample`
+
+That will pull the base image from the Docker Hub, compile the sample image and then run the test. It will take a while the first time, but after that it should be reasonably quick. 
 
 You should see the output of running Cucumber in the terminal once Docker has finished. Hopefully something along these lines:
 
