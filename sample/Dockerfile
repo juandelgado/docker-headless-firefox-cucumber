@@ -4,8 +4,8 @@ MAINTAINER juan@ustwo.com <juan@ustwo.com>
 RUN mkdir -p /home/sample
 WORKDIR /home/sample
 
-COPY features features
-COPY Gemfile Gemfile
-COPY Gemfile.lock Gemfile.lock
+COPY sample/features features
+COPY sample/Gemfile Gemfile
+COPY sample/Gemfile.lock Gemfile.lock
 
 RUN bundle

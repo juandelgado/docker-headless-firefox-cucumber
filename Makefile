@@ -1,4 +1,5 @@
 IMAGE_NAME := juandelgado/headless-firefox-cucumber
+SAMPLE_IMAGE_NAME := juandelgado/headless-firefox-cucumber-sample
 
 default: build
 
@@ -7,13 +8,14 @@ build:
 .PHONY: build
 
 publish:
-	docker push juandelgado/headless-firefox-cucumber
+	docker push $(IMAGE_NAME)
 .PHONY: publish
 
 build-sample:
-	cd sample; docker build -t ustwo/headless-cucumber-sample .
+	docker pull $(IMAGE_NAME)
+	docker build -f sample/Dockerfile -t $(SAMPLE_IMAGE_NAME) .
 .PHONY: build-sample
 
 run-sample: build-sample
-	docker run --rm ustwo/headless-cucumber-sample cucumber
+	docker run --rm $(SAMPLE_IMAGE_NAME) cucumber
 .PHONY: build-sample
