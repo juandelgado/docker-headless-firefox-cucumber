@@ -9,4 +9,3 @@ COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 
 RUN bundle
-ENTRYPOINT ["cucumber"]

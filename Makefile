@@ -7,7 +7,7 @@ build:
 .PHONY: build
 
 publish:
-	docker push juandelgado/headless-firefox-cucumber:0.1
+	docker push juandelgado/headless-firefox-cucumber
 .PHONY: publish
 
 build-sample:
@@ -15,5 +15,5 @@ build-sample:
 .PHONY: build-sample
 
 run-sample: build-sample
-	docker run --rm ustwo/headless-cucumber-sample
+	docker run --rm ustwo/headless-cucumber-sample cucumber
 .PHONY: build-sample
