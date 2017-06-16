@@ -12,7 +12,9 @@ publish:
 .PHONY: publish
 
 build-sample:
+ifndef DEV
 	docker pull $(IMAGE_NAME)
+endif
 	docker build -t $(SAMPLE_IMAGE_NAME) sample
 .PHONY: build-sample
 

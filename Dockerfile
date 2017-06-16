@@ -1,6 +1,8 @@
 FROM ruby:2.4-slim
 MAINTAINER Juan Delgado <juan@ustwo.com>
 
+ENV GECKO_VERSION=v0.17.0
+
 RUN mkdir /home/ustwo
 WORKDIR /home/ustwo
 
@@ -11,11 +13,11 @@ RUN apt-get update && \
     dpkg -i pkg-mozilla-archive-keyring_1.1_all.deb && \
     apt-get update && \
     apt-get install -y -t jessie-backports firefox && \
-    wget https://github.com/mozilla/geckodriver/releases/download/v0.17.0/geckodriver-v0.17.0-linux64.tar.gz && \
-    tar -zxvf geckodriver-v0.17.0-linux64.tar.gz && \
+    wget https://github.com/mozilla/geckodriver/releases/download/$GECKO_VERSION/geckodriver-$GECKO_VERSION-linux64.tar.gz && \
+    tar -zxvf geckodriver-$GECKO_VERSION-linux64.tar.gz && \
     chmod +x geckodriver && \
     mv geckodriver /usr/local/bin && \
-    rm pkg-mozilla-archive-keyring_1.1_all.deb geckodriver-v0.17.0-linux64.tar.gz
+    rm pkg-mozilla-archive-keyring_1.1_all.deb geckodriver-$GECKO_VERSION-linux64.tar.gz
 
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock

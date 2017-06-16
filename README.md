@@ -32,5 +32,4 @@ You should see the output of running Cucumber in the terminal once Docker has fi
 ## Development
 
  * `make` to build the image. 
-
-
+ * `make run-sample DEV=true` to run the sample.
