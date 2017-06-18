@@ -5,7 +5,3 @@ RUN mkdir -p /home/sample
 WORKDIR /home/sample
 
 COPY features features
-COPY Gemfile Gemfile
-COPY Gemfile.lock Gemfile.lock
-
-RUN bundle
