@@ -1,4 +1,4 @@
-FROM juandelgado/headless-firefox-cucumber:latest
+FROM juandelgado/headless-firefox-cucumber:0.1
 MAINTAINER juan@ustwo.com <juan@ustwo.com>
 
 RUN mkdir -p /home/sample
